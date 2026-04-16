@@ -18,23 +18,23 @@ const Hero = () => {
           <p className="text-lg text-foreground mb-8 max-w-xl">
             Japanese-proficient (N3 NAT, JLPT N4) Software Engineer with
             hands-on experience in Java-based ERP development, SQL optimization,
-            and data-driven applications.Prompt Engineer and Software Developer with experience in building AI-powered applications and optimizing prompts for accurate and efficient outputs. 
-            Skilled in API integrations, backend development, and data workflows using Java, Python, and SQL. 
+            and data-driven applications.Prompt Engineer and Software Developer with experience in building AI-powered applications and optimizing prompts for accurate and efficient outputs.
+            Skilled in API integrations, backend development, and data workflows using Java, Python, and SQL.
             Seeking Software Engineer and Data-related roles in Japan.
           </p>
           <div className="flex flex-wrap gap-4">
-            <a
-              href="#projects"
+            <button
+              onClick={() => document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })}
               className="px-8 py-3 bg-secondary text-secondary-foreground rounded-lg font-semibold hover:bg-primary hover:text-primary-foreground transition-colors duration-300"
             >
               View Projects
-            </a>
-            <a
-              href="#contact"
+            </button>
+            <button
+              onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
               className="px-8 py-3 border border-border rounded-lg font-semibold text-card-foreground hover:border-primary hover:text-primary transition-colors duration-300"
             >
               Get in Touch
-            </a>
+            </button>
           </div>
           <div className="flex gap-4 mt-8">
             <a
@@ -62,14 +62,14 @@ const Hero = () => {
         >
           <div className="grid grid-cols-3 gap-4">
             {[
-              
+
               { value: "Python", label: "Primary Lang" },
               { value: "Java", label: "Primary Lang" },
               { value: "8months+", label: "Experience" },
               { value: "AI", label: "Prompt Engineer" },
               { value: "SQL", label: "Database" },
               { value: "日本語", label: "Fluent N3" },
-              
+
             ].map((item) => (
               <div
                 key={item.label}
